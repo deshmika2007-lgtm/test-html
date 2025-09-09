@@ -1,0 +1,155 @@
+  .main-header
+{
+   text-align: center;
+   color: aqua;
+   background-color: beige;
+   font-family: 'Courier New', Courier, monospace;
+   font-size:medium;
+   padding: 15px;
+   width: 100%;
+   box-sizing: border-box;
+
+}
+.main-header.logo 
+  {
+   width: 55px;
+   height: 55px;
+   padding: 8px 14px;
+   margin: 10px 0;
+   }
+  .main-header.logo
+{
+    border-radius:5px;
+}
+   
+.main-header.titles
+{
+ text-align: center;
+font-family: 'Courier New', Courier, monospace;
+font-size: 30px;
+font-style: italic;
+text-transform: capitalize;
+
+}
+h1
+{
+  color: black(104,6,26);
+}
+
+ .bgimage
+{
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+.maincomponent
+{
+    display: flex;
+    border: 2px solid red;
+}
+.box
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em;
+  transition: width 2s, height 2s, transform 2s;
+  transition-delay: 3s;
+}
+#box1{
+  background-color: aqua;
+  transition-timing-function: linear;
+}
+#box2{
+     background-color: blue;
+     transition-timing-function: ease-out;
+}
+
+#box3{
+  background-color: green;
+  transition-timing-function: ease-in-out;
+}
+#box4{
+  background-color: brown;
+  transition-timing-function:ease-in;
+}
+
+
+#box4:hover
+{
+background-color: blueviolet;
+width: 500px;
+}
+#box3:hover
+{
+  background-color: greenyellow;
+  width: 500px;
+}
+#box2:hover
+{
+  background-color: aqua;
+  width: 500px;
+}
+#box1.hover
+{
+  background-color: blue;
+  width: 500px;
+}
+.newrotate{
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  background-color: blueviolet;
+  transition: width 2s, height2s, transform 2s;
+}
+#netrotate:hover
+{
+  width: 250px;
+  height: 250px;
+  transform: rotate(360deg);
+}
+
+@keyframes animid{
+  from{background-color: rgb(255, 0, 179);}
+  to{background-color: rgb(1, 1, 14);}
+}
+.animi
+{
+  width: 150px;
+  height:160px ;
+  animation-name: animid;
+  animation-duration: 5s;
+}
+
+.scrolltext
+{
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-size: 25px;
+  width: 100%;
+  white-space: nowrap;
+  color: chocolate;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+@keyframes scroll-left{
+  from{ transform: translateX(100%); }
+  to{ transform: translateX(-100%); }
+}
+.scrolltext span {
+   display: inline-block;
+   padding-left: 100%;
+   animation: scroll-left 5s linear infinite;
+}
+@keyframes scroll-right{
+  from{ transform: translateX(-100%); }
+  to{ transform: translateX(100%); }
+}
+.scrolltext span {
+  display: inline-block;
+  padding-right: 100%;
+  animation: scroll-right 10s linear infinite;
+}
